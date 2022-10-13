@@ -16,12 +16,21 @@ import javax.swing.SwingConstants;
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import javax.swing.AbstractAction;
+import java.awt.event.ActionEvent;
+import javax.swing.Action;
+import java.awt.event.ActionListener;
 
 public class Log_In extends JFrame {
 
-	private JPanel contentPane;
-	private JTextField username;
-	private JTextField password;
+	public JPanel contentPane;
+	public JTextField username;
+	public JTextField password;
+	public JButton login;
+	String usern,passs;
+	
+	
+	
 
 	/**
 	 * Launch the application.
@@ -72,17 +81,17 @@ public class Log_In extends JFrame {
 		PasswordLabel.setBounds(100, 175, 120, 31);
 		contentPane.add(PasswordLabel);
 		
-		username = new JTextField();
+		username = new JTextField("");
 		username.setBounds(230, 120, 200, 35);
 		contentPane.add(username);
 		username.setColumns(10);
 		
-		password = new JTextField();
+		password = new JTextField("");
 		password.setColumns(10);
 		password.setBounds(228, 174, 200, 35);
 		contentPane.add(password);
 		
-		JButton login = new JButton("LogIn");
+        login = new JButton("LogIn");
 		login.setFont(new Font("Stencil", Font.BOLD | Font.ITALIC, 18));
 		login.setBounds(202, 233, 110, 35);
 		contentPane.add(login);
@@ -91,5 +100,18 @@ public class Log_In extends JFrame {
 		signup.setFont(new Font("Stencil", Font.BOLD | Font.ITALIC, 18));
 		signup.setBounds(320, 233, 110, 35);
 		contentPane.add(signup);
+	}
+	private class SwingAction extends AbstractAction {
+		public SwingAction() {
+			putValue(NAME, "SwingAction");
+			putValue(SHORT_DESCRIPTION, "Some short description");
+		}
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+		
 	}
 }
