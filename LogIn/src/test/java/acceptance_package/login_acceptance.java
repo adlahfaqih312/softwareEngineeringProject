@@ -6,7 +6,7 @@ import io.cucumber.junit.CucumberOptions;
 import io.cucumber.junit.CucumberOptions.SnippetType;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "use_cases/loginf.feature" ,monochrome=true,
+@CucumberOptions(features = "use_cases/SignUp.feature" ,monochrome=true,
           snippets = SnippetType.CAMELCASE,
           
           glue = {"acceptance_package"})

@@ -1,109 +1,43 @@
 package acceptance_package;
 import java.awt.event.ActionEvent;
+import io.cucumber.datatable.DataTable;
 import java.awt.event.ActionListener;
+import java.util.Scanner;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import myLogIn.Log_In;
+import myLogIn.Search;
 
 	public class loginSteps {
 		Log_In l;
+		Search search;
 		String user;
-		String pass;
-		boolean flag=false;
-		
-		@Given("lunch frame")
-		public void lunch_frame() {
-			l=new Log_In();
-			System.out.println("not hello");
+		int pass;
+		Scanner cout=new Scanner(System.in);
+		@Given("console is lunch")
+		public void consoleIsLunch() {
+		    System.out.println("Welcome To Login Page");
+		}
+		@When("I enter {string} and {int}")
+		public void iEnterAnd(String username1, int password1) {
+			System.out.print("Enter your username:  ");
+			username1=cout.next();
+			user=username1;
+			System.out.print("Enter your password:  ");
+			password1=cout.nextInt();
+			pass=password1;
+			l=new Log_In(user,pass);
+		    
+		}
+		@Then("I should have message")
+		public void iShouldHaveMessage() {
+			search=new Search();
+			search.displayMessage(l, l);
 			
+		    
 		}
-		@When("I enter login <button>")
-		public void iEnterLoginButton() {
-			l.login.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-					user=l.username.getText();
-					pass=l.password.getText();
-					
-					
-				}
-			});
-		}
-
-
-		
-		@Given("user enter <username> and <password>")
-		public void userEnterUsernameAndPassword(io.cucumber.datatable.DataTable dataTable) {
-			user=l.username.getText();
-			pass=l.password.getText();
-			System.out.println("hello");
-		}
-		@When("<username> is correct and <password> is correct")
-		public void usernameIsCorrectAndPasswordIsCorrect() {
-			if(user.equals("AdlahFaqih312")) {
-		    	if(pass.equals("12345")) {
-		    		flag=true;
-		    	}
-		    	
-		    }
-		}
-		@Then("I should have successfully <message>")
-		public void iShouldHaveSuccessfullyMessage() {
-			if(flag==true) {
-				System.out.println("Succsefull");
-			}
-			
-		}
-
-		@When("<username> is not correct and <password> is correct")
-		public void usernameIsNotCorrectAndPasswordIsCorrect() {
-			if(user.equals(" ")) {
-		    	if(pass.equals("12345")) {
-		    		flag=false;
-		    	}
-		    	
-		    }
-		}
-		@Then("I should have uncorrect username <message>")
-		public void iShouldHaveUncorrectUsernameMessage() {
-			if(flag==false) {
-				System.out.println("UnSuccsefull");
-			}
-		}
-		
-		@When("<username> is correct and <password> is not correct")
-		public void usernameIsCorrectAndPasswordIsNotCorrect() {
-			if(user.equals("MasaThaer")) {
-		    	if(pass.equals(" ")) {
-		    		flag=false;
-		    	}
-		    	
-		    }
-		}
-		@Then("I should have uncorrect password <message>")
-		public void iShouldHaveUncorrectPasswordMessage() {
-			if(flag==false) {
-				System.out.println("UnSuccsefull");
-			}
-		}
-		
-		@When("<username> is not correct and <password> is not correct")
-		public void usernameIsNotCorrectAndPasswordIsNotCorrect() {
-			if(user.equals(" ")) {
-		    	if(pass.equals(" ")) {
-		    		flag=false;
-		    	}
-		    	
-		    }
-		}
-		@Then("I should have signup <message>")
-		public void iShouldHaveSignupMessage() {
-			if(flag==false) {
-				System.out.println("UnSuccsefull");
-			}
-		}
-
 
 	}
 
