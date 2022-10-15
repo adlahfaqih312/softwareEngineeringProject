@@ -16,80 +16,74 @@ import javax.swing.SwingConstants;
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import javax.swing.AbstractAction;
+import java.awt.event.ActionEvent;
+import javax.swing.Action;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 
-public class Log_In extends JFrame {
-
-	private JPanel contentPane;
-	private JTextField username;
-	private JTextField password;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Log_In frame = new Log_In();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the frame.
-	 */
+public class Log_In  {
+	private String username;
+	private int password;
+	List<String> loginInfo1=new ArrayList<>();//for username
+	List<Integer> loginInfo2=new ArrayList<>();//for password
 	public Log_In() {
-		setBackground(new Color(0, 128, 192));
-		setUndecorated(true);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 600, 300);
-		contentPane = new JPanel();
-		contentPane.setBackground(new Color(255, 255, 255));
-		contentPane.setBorder(new MatteBorder(4, 4, 4, 4, (Color) new Color(0, 0, 0)));
-
-		setContentPane(contentPane);
-		contentPane.setLayout(null);
 		
-		JLabel WelcomeLabel = new JLabel("Welcome");
-		WelcomeLabel.setFont(new Font("Snap ITC", Font.BOLD | Font.ITALIC, 25));
-		WelcomeLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		WelcomeLabel.setBounds(214, 52, 150, 50);
-		contentPane.add(WelcomeLabel);
-		
-		JLabel UsernameLabel = new JLabel("Username :");
-		UsernameLabel.setFont(new Font("Stencil", Font.BOLD | Font.ITALIC, 18));
-		UsernameLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		UsernameLabel.setBounds(100, 120, 120, 31);
-		contentPane.add(UsernameLabel);
-		
-		JLabel PasswordLabel = new JLabel("Password :");
-		PasswordLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		PasswordLabel.setFont(new Font("Stencil", Font.BOLD | Font.ITALIC, 18));
-		PasswordLabel.setBounds(100, 175, 120, 31);
-		contentPane.add(PasswordLabel);
-		
-		username = new JTextField();
-		username.setBounds(230, 120, 200, 35);
-		contentPane.add(username);
-		username.setColumns(10);
-		
-		password = new JTextField();
-		password.setColumns(10);
-		password.setBounds(228, 174, 200, 35);
-		contentPane.add(password);
-		
-		JButton login = new JButton("LogIn");
-		login.setFont(new Font("Stencil", Font.BOLD | Font.ITALIC, 18));
-		login.setBounds(202, 233, 110, 35);
-		contentPane.add(login);
-		
-		JButton signup = new JButton("SignUp");
-		signup.setFont(new Font("Stencil", Font.BOLD | Font.ITALIC, 18));
-		signup.setBounds(320, 233, 110, 35);
-		contentPane.add(signup);
 	}
+	public Log_In(int pass) {
+		this.password=pass;
+	}
+	public Log_In(String user) {
+		this.username=user;
+	}
+	public Log_In(String user,int pass) {
+		this.setUsername(user);
+		this.setPassword(pass);
+	}
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	public int getPassword() {
+		return password;
+	}
+	public void setPassword(int password) {
+		this.password = password;
+	}
+	public List<String> getUserName(){
+		
+		loginInfo1.add("Adlah");
+		loginInfo1.add("Masa");
+		loginInfo1.add("Arwa");
+		
+		return loginInfo1;
+		
+	}
+	public List<Integer> getPassWord(){
+		
+		loginInfo2.add(12345);
+		loginInfo2.add(12345);
+		loginInfo2.add(12345);
+		
+		
+		return loginInfo2;
+		
+	}
+	public void addToList(Log_In userName2, Log_In passWord2) {
+		
+		loginInfo1.add(username);
+		loginInfo2.add(password);
+		
+	}
+	
+	
+public static void main(String[] args) {
+		
+	}
+
+
+	
 }
