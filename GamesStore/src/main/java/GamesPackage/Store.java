@@ -41,9 +41,9 @@ public static AdminOfStore admin3 = new AdminOfStore();
 		admin2.setUsername("Masa");
 	   admin3.setUsername("Arwa");
 
-		admin1.setPasword("00312");
-		admin2.setPasword("01234");
-		admin3.setPasword("12345");
+		admin1.setPasword("123456");
+		admin2.setPasword("123456");
+		admin3.setPasword("123456");
 		
 		
 		user1.setID("119");

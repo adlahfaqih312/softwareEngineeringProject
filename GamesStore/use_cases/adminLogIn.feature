@@ -7,9 +7,9 @@ Feature: Admin login
 
     Examples: 
       | username | password |
-      | "Adlah"  | "00312"  |
-      | "Masa"   | "01234"  |
-      | "Arwa"   | "12345"  |
+      | "Adlah"  | "123456"  |
+      | "Masa"   | "123456"  |
+      | "Arwa"   | "123456"  |
 
   Scenario Outline: Admin has the wrong password 
     Given Admin selected to log in

@@ -39,14 +39,16 @@ public class addGameSteps {
 
 	@Then("game was added to the Store")
 	public void game_was_added_to_the_store() {
-		equals(login);
+		/////////
+		assertTrue(login==false);
 	}
 
 	
 
 	@Then("The game has not been added")
 	public void the_game_has_not_been_added() {
-		equals(!login);
+		//////////////
+		assertTrue(!login==true);
 	}
 
 	@Given("Admin not loged in")
@@ -61,8 +63,9 @@ public class addGameSteps {
 
 	@Then("Admin could not add a game")
 	public void admin_could_not_add_a_game() {
-		equals(!login);
-	}
+		/////////////////
+		assertTrue(!login==true);
+		}
 	
 	
 	
@@ -100,7 +103,8 @@ public class addGameSteps {
 	}
 	@Then("Admin could not add game")
 	public void adminCouldNotAddGame() {
-		equals(!login);
+		///////////////////
+		assertTrue(!login==true);
 	}
 	
 	

@@ -1,7 +1,5 @@
 package acceptance_package;
 
-import static org.junit.Assert.assertTrue;
-
 import org.junit.Assert;
 
 import GamesPackage.AdminOfStore;
@@ -9,7 +7,9 @@ import GamesPackage.Store;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
 
 
 public class adminLogIn {
@@ -37,7 +37,10 @@ public class adminLogIn {
 
 	@Then("log in must be successful")
 	public void log_in_must_be_successful() {
-		equals(login);
+	//////////
+		assertTrue(!login==true);
+	//	assertEquals(!login,true);
+		
 	}
 
 	@When("Admin entered the valid {string} and the unvalid {string}")
@@ -49,8 +52,9 @@ public class adminLogIn {
 
 	@Then("log in must be field")
 	public void log_in_must_be_field() {
-		equals(!login);
-	//	assertTrue(!login);
+	//////////////////
+		assertTrue(login==false);
+	//	assertEquals(login,false);
 	}
 
 }

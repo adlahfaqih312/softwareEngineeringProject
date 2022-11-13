@@ -41,7 +41,8 @@ public class registerUser {
 	@Then("Create user must be successful")
 	public void create_user_must_be_successful() {
 		System.out.println("Succsessfull");
-	    equals(create);
+		assertTrue(create==false);
+	    //equals(create);
 	}
 
 	@Given("Admin is logged in")
@@ -60,14 +61,16 @@ public class registerUser {
 	@When("user is already exist")
 	public void user_is_already_exist() {
 		if (Store.foundUser == 1) {
-			equals(!create);
+			assertTrue(!create==true);
+		//	equals(!create);
 		}
 	}
 
 	@Then("Admin can not add this user")
 	public void admin_can_not_add_this_user() {
 		System.out.println("you arealready register");
-		equals(!create);
+		//equals(!create);
+		assertTrue(!create==true);
 	}
 
 	@Given("Admin is not logged in")
@@ -83,7 +86,7 @@ public class registerUser {
 	@Then("Admin can not create user")
 	public void admin_can_not_create_user() {
 		System.out.print("Admin Should log in");
-		equals(!create);
+		assertTrue(!create==true);
 	}
 
 }

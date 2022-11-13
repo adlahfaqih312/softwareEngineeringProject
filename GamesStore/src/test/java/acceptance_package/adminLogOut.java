@@ -1,6 +1,8 @@
 package acceptance_package;
 
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
 
 import GamesPackage.Store;
 import io.cucumber.java.en.Given;
@@ -28,7 +30,8 @@ public class adminLogOut {
 
 	@Then("log out done")
 	public void log_out_done() {
-		equals(!a);
+		assertTrue(!a==true);
+		//assertEquals(!a,false);
 	}
 
 }
