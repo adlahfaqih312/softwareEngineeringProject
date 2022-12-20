@@ -172,7 +172,7 @@ public class borrowgamesteps {
 
 	 @Then("the error massage {string} is given")
 	 public void the_error_massage_is_given(String string) {
-		 if(retur==true) {
+		 if(retur==false) {
 				errr="Can't borrow game, you have fines";
 				if(string.equals(errr)) {
 					assertTrue(true);

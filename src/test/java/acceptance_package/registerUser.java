@@ -60,7 +60,7 @@ public class registerUser {
 	@When("user is already exist")
 	public void user_is_already_exist() {
 		if (Store.foundUser == 1) {
-			equals(!create);
+			
 		}
 	}
 
