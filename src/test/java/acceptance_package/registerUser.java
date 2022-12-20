@@ -5,10 +5,10 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import static org.junit.Assert.assertTrue;
 
-import GamesPackage.AdminOfStore;
-import GamesPackage.MyGame;
-import GamesPackage.Store;
-import GamesPackage.UsersOfStore;
+import games_package.AdminOfStore;
+import games_package.MyGame;
+import games_package.Store;
+import games_package.UsersOfStore;
 
 public class registerUser {
 	UsersOfStore user = new UsersOfStore();
@@ -59,7 +59,7 @@ public class registerUser {
 
 	@When("user is already exist")
 	public void user_is_already_exist() {
-		if (Store.foundUser == 1) {
+		if (Store.FOUNDUSER == 1) {
 			
 		}
 	}

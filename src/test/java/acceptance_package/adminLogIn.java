@@ -4,8 +4,8 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Assert;
 
-import GamesPackage.AdminOfStore;
-import GamesPackage.Store;
+import games_package.AdminOfStore;
+import games_package.Store;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

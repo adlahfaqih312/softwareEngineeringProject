@@ -2,7 +2,7 @@ package acceptance_package;
 
 import static org.junit.Assert.assertTrue;
 
-import GamesPackage.Store;
+import games_package.Store;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
