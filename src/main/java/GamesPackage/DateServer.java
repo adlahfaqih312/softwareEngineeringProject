@@ -12,10 +12,7 @@ public class DateServer {
 		
 		datedserver=getDate();
 	}
-	public void setDate(Calendar date) {
-		
-		datedserver=date;
-	}
+	
 	public Calendar getDate() {
 		
         return Calendar.getInstance();

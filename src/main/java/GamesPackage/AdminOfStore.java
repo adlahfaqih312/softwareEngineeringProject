@@ -38,12 +38,7 @@ public class AdminOfStore {
 		for (int i = 0; i <Store.admins.size() ; i++)
 	
 		{
-			if (getUsername().equalsIgnoreCase(Store.admins.get(i).getUsername())
-					&& getPasword().equalsIgnoreCase(Store.admins.get(i).getPasword())) {
-				Store.admins.get(i).setLogin(true);
-			//	System.out.println(Store.admins.size());
-				return true;
-			}
+			
 		
 		}
 		return false;
@@ -54,11 +49,7 @@ public class AdminOfStore {
 		for (int i = 0; i < Store.admins.size(); i++)
 	
 		{
-			if (username.equalsIgnoreCase(Store.admins.get(i).getUsername())&& Store.admins.get(i).getLogin().equals(Boolean.FALSE)) 
-			 {
-					Store.admins.get(i).setLogin(false);
-					return true;
-				}
+			
 	
 			
 		}

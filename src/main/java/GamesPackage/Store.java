@@ -53,73 +53,24 @@ public static AdminOfStore admin3 = new AdminOfStore();
 		
 	}
 	
-	public boolean addGame(MyGame game) {
-		item.add(game);
-		return true;
-	}
+	
 	
 	public boolean checkLogin(String username) {
 
 		for (int i = 0; i < admins.size(); i++)
 
 		{
-			if ((username.equalsIgnoreCase(admins.get(i).getUsername())) && admins.get(i).getLogin().equals(Boolean.FALSE)) {
-				
-					return true;
 			
-			}
 		}
 		return false;
 	}
 	
 	
-	public boolean check_Login(String password) {
-
-		for (int j = 0; j < admins.size(); j++)
-
-		{
-			if ((password.equalsIgnoreCase(admins.get(j).getPasword())) && admins.get(j).getLogin().equals(Boolean.FALSE)) {
-				
-					return true;
-			
-			}
-		}
-		return false;
-	}
 	
 	public static int foundUser = 0;
 
-	 public void searchUser(String name) 
-	 {
-		  
-	    for (UsersOfStore b : Users) 
-	    {
-	        if (b.getName().equals(name)) 
-	        {
-	           if (foundUser == 0) 
-	    {
-	        	   foundUser = 1;
-	        }    
-	       
-	    }
-	}
-	    
-	}
 	 
-	 public boolean checkLoginUser(String username) {
-
-			for (int i = 0; i < admins.size(); i++)
-
-			{
-				if ((username.equalsIgnoreCase(Users.get(i).getName()))
-						&&Users.get(i).getLogin().equals(Boolean.FALSE)) {
-					
-						return true;		
-
-				}
-			}
-			return false;
-		}
+	 
 
 	public String search(String type, String string) {
 		String t = "null";
