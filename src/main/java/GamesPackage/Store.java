@@ -1,24 +1,24 @@
-package GamesPackage;
+package games_package;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Store {
-	 public List<MyGame> item = new ArrayList<MyGame>();
-	 public MyGame game1=new MyGame();
-	 public MyGame game2=new MyGame();
-	public MyGame game3=new MyGame();
+	 protected static final List<MyGame> item = new ArrayList<>();
+	 public static final MyGame game1=new MyGame();
+	 public static final MyGame game2=new MyGame();
+	 public static final MyGame game3=new MyGame();
 	
 	
-	public static List<AdminOfStore> admins = new ArrayList<AdminOfStore>();
-	public static AdminOfStore admin1 = new AdminOfStore();
-	public static AdminOfStore admin2 = new AdminOfStore();
-public static AdminOfStore admin3 = new AdminOfStore();
+	protected static final List<AdminOfStore> admins = new ArrayList<>(); 
+	public static final AdminOfStore admin1 = new AdminOfStore();
+	public static final AdminOfStore admin2 = new AdminOfStore();
+    public static final AdminOfStore admin3 = new AdminOfStore();
 
-	public static List<UsersOfStore> Users = new ArrayList<UsersOfStore>();
-	public static UsersOfStore user1 = new UsersOfStore();
-	public static UsersOfStore user2 = new UsersOfStore();
-	public static UsersOfStore user3 = new UsersOfStore();
+    protected static final List<UsersOfStore> Users = new ArrayList<>();
+	public static final UsersOfStore user1 = new UsersOfStore();
+	public static final UsersOfStore user2 = new UsersOfStore();
+	public static final UsersOfStore user3 = new UsersOfStore();
 	
 	public Store() {
 		super();
@@ -56,18 +56,12 @@ public static AdminOfStore admin3 = new AdminOfStore();
 	
 	
 	public boolean checkLogin(String username) {
-
-		for (int i = 0; i < admins.size(); i++)
-
-		{
-			
-		}
 		return false;
 	}
 	
 	
 	
-	public static int foundUser = 0;
+	public static final int FOUNDUSER = 0;
 
 	 
 	 
@@ -103,7 +97,7 @@ public static AdminOfStore admin3 = new AdminOfStore();
 	private String resultFound(String t, CharSequence seq, int l, String test) {
 		if (test.contains(seq)) {
 			t = test;
-			System.out.println("Found");
+			
 		}
 		return t;
 	}

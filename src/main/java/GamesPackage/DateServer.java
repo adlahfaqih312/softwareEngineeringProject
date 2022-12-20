@@ -1,16 +1,16 @@
-package GamesPackage;
+package games_package;
 
 import java.util.Calendar;
 
 
 public class DateServer {
 	
-	public  Calendar datedserver;
+	public static final Calendar datedserver =Calendar.getInstance();
  
 	
 	public DateServer() {
 		
-		datedserver=getDate();
+		//this method is empty because there was an major error
 	}
 	
 	public Calendar getDate() {

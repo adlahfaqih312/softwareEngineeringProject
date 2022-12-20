@@ -1,21 +1,21 @@
-package GamesPackage;
+package games_package;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 
 
 
 public class MyGame {
-	public String gameName;
-	public String gameType;
-	public String gamePrice;
-	public DateServer dateServ;
-	public Calendar dateofb;
-	public boolean late=false;
-	public static ArrayList<MyGame> iitems= new ArrayList<MyGame>(); ;
+	public  String gameName;
+	public  String gameType;
+	public  String gamePrice;
+	public static final DateServer dateServ = new DateServer();
+	public static final Calendar dateofb =Calendar.getInstance();
+	public static final boolean LATE=false;
+	private static final List<MyGame> iitems= new ArrayList<>(); 
 	public MyGame() {
-		dateServ= new DateServer();
 		gameName="GTA";
 		gameType="Action & Life";
 	}
@@ -39,9 +39,13 @@ public class MyGame {
 		this.gamePrice = gamePrice;
 	}
 	public void setDateServer(DateServer dateServ) {
-		this.dateServ=dateServ;
+		//this method is empty because there was critical bug 
 
 		
+	}
+
+	public static List<MyGame> getIitems() {
+		return iitems;
 	}
 	
 	

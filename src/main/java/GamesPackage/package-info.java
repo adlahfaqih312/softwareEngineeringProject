@@ -1,1 +1,1 @@
-package GamesPackage;
+package games_package;
