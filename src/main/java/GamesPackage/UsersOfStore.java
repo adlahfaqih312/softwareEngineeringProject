@@ -1,11 +1,18 @@
 package GamesPackage;
 
+import java.util.ArrayList;
+
 
 public class UsersOfStore {
 	private String ID;
 	private String name;
 	private String email;
 	private Boolean login;
+	public static ArrayList<UsersOfStore> clients =new ArrayList<UsersOfStore>() ;
+	public  ArrayList<MyGame> borroweditems2 =new ArrayList<MyGame>() ;
+	public int fine=0;
+	public int reg=0;
+	public boolean late=false;
 	
 	public UsersOfStore() {
 		super();
