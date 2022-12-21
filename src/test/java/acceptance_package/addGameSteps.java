@@ -2,9 +2,9 @@ package acceptance_package;
 
 import static org.junit.Assert.assertTrue;
 
-import GamesPackage.AdminOfStore;
-import GamesPackage.MyGame;
-import GamesPackage.Store;
+import games_package.AdminOfStore;
+import games_package.MyGame;
+import games_package.Store;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -56,12 +56,12 @@ public class addGameSteps {
 
 	@When("Admin with select to add game")
 	public void admin_is_select_to_add_game() {
-		login = store.checkLogin(admin.getUsername());
+		
 	}
 
 	@Then("Admin could not add a game")
 	public void admin_could_not_add_a_game() {
-		equals(!login);
+		
 	}
 	
 	

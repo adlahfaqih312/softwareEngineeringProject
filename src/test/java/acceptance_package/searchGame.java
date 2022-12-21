@@ -3,8 +3,9 @@ import static org.junit.Assert.assertSame;
 
 import static org.junit.Assert.*;
 import java.util.ArrayList;
-import GamesPackage.MyGame;
-import GamesPackage.Store;
+
+import games_package.MyGame;
+import games_package.Store;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

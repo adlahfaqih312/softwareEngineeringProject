@@ -4,8 +4,8 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Assert;
 
-import GamesPackage.AdminOfStore;
-import GamesPackage.Store;
+import games_package.AdminOfStore;
+import games_package.Store;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -37,7 +37,8 @@ public class adminLogIn {
 
 	@Then("log in must be successful")
 	public void log_in_must_be_successful() {
-		equals(login);
+	    assertTrue(!login);
+		System.out.println("you are login");
 	}
 
 	@When("Admin entered the valid {string} and the unvalid {string}")
@@ -50,7 +51,7 @@ public class adminLogIn {
 	@Then("log in must be field")
 	public void log_in_must_be_field() {
 		equals(!login);
-	//	assertTrue(!login);
+		assertTrue(!login);
 	}
 
 }
