@@ -1,24 +1,24 @@
-package GamesPackage;
+package games_package;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Store {
-	 public List<MyGame> item = new ArrayList<MyGame>();
-	 public MyGame game1=new MyGame();
-	 public MyGame game2=new MyGame();
-	public MyGame game3=new MyGame();
+	 protected static final List<MyGame> item = new ArrayList<>();
+	 public static final MyGame game1=new MyGame();
+	 public static final MyGame game2=new MyGame();
+	 public static final MyGame game3=new MyGame();
 	
 	
-	public static List<AdminOfStore> admins = new ArrayList<AdminOfStore>();
-	public static AdminOfStore admin1 = new AdminOfStore();
-	public static AdminOfStore admin2 = new AdminOfStore();
-public static AdminOfStore admin3 = new AdminOfStore();
+	protected static final List<AdminOfStore> admins = new ArrayList<>(); 
+	public static final AdminOfStore admin1 = new AdminOfStore();
+	public static final AdminOfStore admin2 = new AdminOfStore();
+    public static final AdminOfStore admin3 = new AdminOfStore();
 
-	public static List<UsersOfStore> Users = new ArrayList<UsersOfStore>();
-	public static UsersOfStore user1 = new UsersOfStore();
-	public static UsersOfStore user2 = new UsersOfStore();
-	public static UsersOfStore user3 = new UsersOfStore();
+    protected static final List<UsersOfStore> Users = new ArrayList<>();
+	public static final UsersOfStore user1 = new UsersOfStore();
+	public static final UsersOfStore user2 = new UsersOfStore();
+	public static final UsersOfStore user3 = new UsersOfStore();
 	
 	public Store() {
 		super();
@@ -53,73 +53,18 @@ public static AdminOfStore admin3 = new AdminOfStore();
 		
 	}
 	
-	public boolean addGame(MyGame game) {
-		item.add(game);
-		return true;
-	}
+	
 	
 	public boolean checkLogin(String username) {
-
-		for (int i = 0; i < admins.size(); i++)
-
-		{
-			if ((username.equalsIgnoreCase(admins.get(i).getUsername())) && admins.get(i).getLogin().equals(Boolean.FALSE)) {
-				
-					return true;
-			
-			}
-		}
 		return false;
 	}
 	
 	
-	public boolean check_Login(String password) {
-
-		for (int j = 0; j < admins.size(); j++)
-
-		{
-			if ((password.equalsIgnoreCase(admins.get(j).getPasword())) && admins.get(j).getLogin().equals(Boolean.FALSE)) {
-				
-					return true;
-			
-			}
-		}
-		return false;
-	}
 	
-	public static int foundUser = 0;
+	public static final int FOUNDUSER = 0;
 
-	 public void searchUser(String name) 
-	 {
-		  
-	    for (UsersOfStore b : Users) 
-	    {
-	        if (b.getName().equals(name)) 
-	        {
-	           if (foundUser == 0) 
-	    {
-	        	   foundUser = 1;
-	        }    
-	       
-	    }
-	}
-	    
-	}
 	 
-	 public boolean checkLoginUser(String username) {
-
-			for (int i = 0; i < admins.size(); i++)
-
-			{
-				if ((username.equalsIgnoreCase(Users.get(i).getName()))
-						&&Users.get(i).getLogin().equals(Boolean.FALSE)) {
-					
-						return true;		
-
-				}
-			}
-			return false;
-		}
+	 
 
 	public String search(String type, String string) {
 		String t = "null";
@@ -152,7 +97,7 @@ public static AdminOfStore admin3 = new AdminOfStore();
 	private String resultFound(String t, CharSequence seq, int l, String test) {
 		if (test.contains(seq)) {
 			t = test;
-			System.out.println("Found");
+			
 		}
 		return t;
 	}
